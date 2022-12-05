@@ -335,10 +335,10 @@ soma.data <- read.table ("mc3_COAD_mc3.txt", sep = "\t", head = TRUE)
 soma.data$sample<-gsub(soma.data$sample, pattern="-", replace=".")
 dim (soma.data)
 soma.data2 <- soma.data [which (is.element(soma.data$sample, colnames(rna.data))),]
-soma.data [1:3,1:5]
-sNames.soma <- unique (as.character(soma.data$sample))
+soma.data2 [1:3,1:5]
+sNames.soma <- unique (as.character(soma.data2$sample))
 sNames.soma
-soma.data.ANKDD1A <- soma.data[which (soma.data$gene == "ANKDD1A"), ]
+soma.data.ANKDD1A <- soma.data2[which (soma.data2$gene == "ANKDD1A"), ]
 soma.data.ANKDD1A
 #Four results
 rna.data["ANKDD1A","TCGA.CA.6716.01"]
