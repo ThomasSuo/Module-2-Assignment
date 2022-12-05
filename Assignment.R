@@ -272,6 +272,8 @@ ExpVal.death <- expMeth.cancer [which (expMeth.cancer$Vital == "death"), 1]
 ExpVal.alive <- expMeth.cancer [which (expMeth.cancer$Vital == "alive"), 1]
 Meth.death <- expMeth.cancer [which (expMeth.cancer$Vital == "death"), 2]
 Meth.alive <- expMeth.cancer [which (expMeth.cancer$Vital == "alive"), 2]
+Survival <- expMeth.cancer$Vital
+Survival
 ggplot(data=expMeth.cancer, aes(x=Betavalue, y=ExpVal, color = Survival)) + xlab ("cg09291474 DNA Methylation") + ylab ("ANKDD1A Expression Value") + geom_point()+ geom_smooth(method = "lm")
 shapiro.test(ExpVal.death)
 shapiro.test(Meth.death)
