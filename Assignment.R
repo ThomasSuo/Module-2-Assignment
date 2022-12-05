@@ -308,7 +308,7 @@ head (rna.data2)
 rownames (ExpCNV)[1]
 for (i in 1:ncol (Gistic2.data)){
   ExpCNV[i,1] <- Gistic2.data["ANKDD1A",rownames (ExpCNV)[i]]
-  ExpCNV[i,2] <- rna.data2 ["ANKDD1A", rownames (ExpCNV)[i]]
+  ExpCNV[i,2] <- rna.data ["ANKDD1A", rownames (ExpCNV)[i]]
 }
 ExpCNV <- as.data.frame(ExpCNV)
 ExpCNV$CNA.Type <- as.numeric (ExpCNV$CNA.Type)
@@ -337,7 +337,7 @@ dim (soma.data)
 soma.data2 <- soma.data [which (is.element(soma.data$sample, colnames(rna.data))),]
 soma.data [1:3,1:5]
 sNames.soma <- unique (as.character(soma.data$sample))
-sNames
+sNames.soma
 soma.data.ANKDD1A <- soma.data[which (soma.data$gene == "ANKDD1A"), ]
 soma.data.ANKDD1A
 #Four results
