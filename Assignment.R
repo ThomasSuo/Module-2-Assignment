@@ -348,7 +348,7 @@ rna.data["ANKDD1A","TCGA.F4.6856.01"]
 
 #rppa
 rppa.data <- read.table ("TCGA.COAD.sampleMap_RPPA_RBN", sep = "\t", head = TRUE, row.name = 1)
-dim (rppa)
-rppa.data <- rppa.data [,which (is.element(colnames (rppa), colnames (rna.data)))]
+dim (rppa.data)
+rppa.data <- rppa.data [,which (is.element(colnames (rppa.data), colnames (rna.data)))]
 rppa.data["ANKDD1A",]
 ##No ANKDD1A results
